@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{   string seat[]={"WS","MS","AS","AS","MS","WS","WS","MS","AS","AS","MS","WS"};
+	int test;
+	int num;
+	cin>>test;
+	while(test--)
+	{
+		cin>>num;
+		int r=num%12;
+        int d;
+        r==0?d=num-11,r=12:d=num+(13-(2*r));
+        
+        cout<<d<<" "<<seat[r-1]<<"\n";
+
+	}
+    return 0;
+}
