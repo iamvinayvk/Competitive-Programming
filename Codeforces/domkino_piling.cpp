@@ -10,6 +10,9 @@ using namespace std;
 int main(){
 	
 		fast
+		int n,m;
+		cin>>n>>m;
+		cout<<((n*m)>>1);
 
 
 	return 0;

@@ -10,6 +10,15 @@ using namespace std;
 int main(){
 	
 		fast
+		w(t)
+		{
+			long long int x,y,a,b,money1=0,money2=0;
+			cin>>x>>y>>a>>b;
+			money2=a*(x+y);
+			
+			money1=x<=y?((b*x)+(a*(y-x))):((b*y)+(a*(x-y)));
+			cout<<((money1<=money2)?money1:money2)<<"\n"; 
+		}
 
 
 	return 0;

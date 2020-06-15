@@ -10,6 +10,20 @@ using namespace std;
 int main(){
 	
 		fast
+		w(t)
+		{
+			long long int ts;
+			cin>>ts;
+			while(ts%2==0)
+			{
+				
+				ts=ts>>1;
+				
+			}
+			cout<<(ts>>1)<<"\n";
+
+
+		}
 
 
 	return 0;

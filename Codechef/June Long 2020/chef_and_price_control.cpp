@@ -10,6 +10,21 @@ using namespace std;
 int main(){
 	
 		fast
+		w(t)
+		{
+			int n,k;
+			cin>>n>>k;
+			long long int sum2=0;
+			for(int i=0;i<n;i++)
+			{
+				int input;
+				cin>>input;
+				if(input>k)
+				sum2+=(input-k);
+				
+			}
+			cout<<sum2<<"\n";
+		}
 
 
 	return 0;

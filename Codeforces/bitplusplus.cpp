@@ -10,6 +10,23 @@ using namespace std;
 int main(){
 	
 		fast
+		int n;
+		cin>>n;
+		int value=0;
+		while(n--)
+		{
+			string x;
+			cin>>x;
+			if(x[0]=='+'||x[2]=='+')
+			{
+				value++;
+				
+			}
+			else{
+				value--;
+			}
+		}
+		cout<<value;
 
 
 	return 0;
