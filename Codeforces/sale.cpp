@@ -8,10 +8,8 @@ using namespace std;
 #define all(x) x.begin(),x.end()
 #define F first
 #define S second
-#define vi vector<int> 
-#define vll vector<long long>
+#define vt(x) vector<x> 
 #define FOR(start,end,increment) for(ll i=start;i<end;i+=increment)
-
 
 
 
@@ -19,6 +17,28 @@ using namespace std;
 int main(){
 	
 		fast
+		int n,m;
+		cin>>n>>m;
+		vt(int) a(n);
+		FOR(0,n,1)
+		{
+			cin>>a[i];
+		}
+		sort(all(a));
+		int value=0;
+		FOR(0,n,1)
+		{
+			if(a[i]<0&&i<m)
+			{
+				value+=(abs(a[i]));
+			}
+			else
+				break;
+		}
+		cout<<value;
+
+
+
 
 
 	return 0;

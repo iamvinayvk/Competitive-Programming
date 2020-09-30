@@ -19,6 +19,33 @@ using namespace std;
 int main(){
 	
 		fast
+		string s;
+		cin>>s;
+		int i=0;
+		int flag=0;
+		string ans="";
+		while(i<s.length())
+		{
+			
+			if((s[i]=='W')&&(s[i+1]=='U')&&(s[i+2]=='B'))
+			{
+				if(flag==1)
+				{
+					flag=0;
+					ans+=" ";
+				}
+				i+=3;
+			}
+			else
+			{
+				ans+=s[i];
+				i++;
+				flag=1;
+			}
+
+
+		}
+		cout<<ans;
 
 
 	return 0;

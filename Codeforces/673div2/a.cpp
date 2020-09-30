@@ -5,20 +5,29 @@ using namespace std;
 #define ll long long int
 #define w(t) int t;cin>>t;while(t--)
 #define mod 1000000007
-#define all(x) x.begin(),x.end()
-#define F first
-#define S second
-#define vi vector<int> 
-#define vll vector<long long>
-#define FOR(start,end,increment) for(ll i=start;i<end;i+=increment)
-
-
 
 
 
 int main(){
 	
 		fast
+		w(t)
+		{
+			int n,k;
+			cin>>n>>k;
+			vector<int> a(n);
+			for(int i=0;i<n;i++)
+			{
+				cin>>a[i];
+			}
+			int count=0;
+			sort(a.begin(),a.end());
+			for(int i=1;i<n;i++)
+			{
+				count+=((k-a[i])/a[0]);
+			}
+			cout<<count<<"\n";
+		}
 
 
 	return 0;

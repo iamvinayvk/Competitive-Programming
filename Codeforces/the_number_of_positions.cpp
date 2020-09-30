@@ -19,6 +19,9 @@ using namespace std;
 int main(){
 	
 		fast
+		int n,a,b;
+		cin>>n>>a>>b;
+		cout<<min((n-a),b+1);
 
 
 	return 0;

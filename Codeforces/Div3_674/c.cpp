@@ -5,20 +5,26 @@ using namespace std;
 #define ll long long int
 #define w(t) int t;cin>>t;while(t--)
 #define mod 1000000007
-#define all(x) x.begin(),x.end()
-#define F first
-#define S second
-#define vi vector<int> 
-#define vll vector<long long>
-#define FOR(start,end,increment) for(ll i=start;i<end;i+=increment)
-
-
 
 
 
 int main(){
 	
 		fast
+		w(t)
+		{
+			int n;
+			cin>>n;
+		
+			ll ans=1e18;
+			for(ll i=1;i*i<=n;i++)
+			{
+				ans=min(ans,((i-1)+(n-1)/i));
+			}
+
+			cout<<ans<<"\n";
+
+		}
 
 
 	return 0;

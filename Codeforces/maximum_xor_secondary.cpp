@@ -12,38 +12,52 @@ using namespace std;
 int main(){
 	
 		fast
-		ll n;
+		int n;
 		cin>>n;
 		vector<ll> a(n+5);
 		for(ll i=0;i<n;i++)
 			cin>>a[i];
 		stack<ll> s;
-		ll i=1;
-		ll max_xor=0;
-		ll xorr=0;
+		int i=1;
+		int max_xor=0;
+		// cout<<(99999537^99998582)<<"\n";
+		int xorr=(a[0]^a[1]);
+		// cout<<xorr<<"\n";
+		int last=0;
 		s.push(a[0]);
 		while(i<n)
 		{
-			if(a[i]<s.top())
+			 if(a[i]<s.top())
 			{
 				xorr=s.top()^a[i];
+				max_xor=max(max_xor,xorr);
 				s.push(a[i]);
 			}
 			else
 			{
-				while(s.empty()||s.top()<a[i])
+				
+				// cout<<xorr<<"\n";
+				while(!s.empty()&&s.top()<a[i]){
+					xorr=a[i]^s.top();
+					max_xor=max(max_xor,xorr);
 					s.pop();
+
+					
+				}
 				if(!s.empty())
 				{
 					xorr=a[i]^s.top();
+					max_xor=max(max_xor,xorr);
+					s.push(a[i]);
 				}
 				else
 				{
+					
 					s.push(a[i]);
 				}
 			}
-			if(max_xor<xorr)
-				max_xor=xorr;
+			
+			// cout<<"max_xor: "<<max_xor<<" xorr: "<<xorr<<" i: "<<i<<" a[i]: "<<a[i]<<"\n";
 			i++;
 
 		}

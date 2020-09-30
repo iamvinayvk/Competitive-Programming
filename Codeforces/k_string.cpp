@@ -19,6 +19,39 @@ using namespace std;
 int main(){
 	
 		fast
+		int k;
+		cin>>k;
+		string s;
+		cin>>s;
+		map<char,int> m;
+		for(int i=0;i<s.length();i++)
+		{
+			m[s[i]]++;
+		}
+		int flag=0;
+		string ans="";
+		for(auto x:m)
+		{
+			if((x.S%k)!=0)
+			{
+				flag=1;
+				break;
+			}
+			
+			for(int i=0;i<x.S/k;i++)
+			ans+=x.F;
+			
+			
+		}
+		if(flag)
+		{
+			cout<<"-1";
+		}
+		else
+		{
+			for(int i=0;i<k;i++)
+				cout<<ans;
+		}
 
 
 	return 0;

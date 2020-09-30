@@ -15,10 +15,30 @@ using namespace std;
 
 
 
-
 int main(){
 	
 		fast
+		int k;
+		cin>>k;
+		vi a(12);
+		int sum=0;
+		for(int i=0;i<12;i++)
+		{
+			cin>>a[i];
+			
+		}
+		int count=0;
+		sort(all(a));
+		reverse(all(a));
+		while(sum<k&&count<12)
+		{
+			sum+=a[count];
+			count++;
+		}
+		if(count<12||sum>=k)
+		cout<<(count);
+		else 
+			cout<<-1;
 
 
 	return 0;
