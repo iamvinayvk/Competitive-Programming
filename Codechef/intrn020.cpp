@@ -6,6 +6,15 @@ using namespace std;
 #define w(t) int t;cin>>t;while(t--)
 #define mod 1000000007
 
+bool isprime(ll  n)
+{
+    for(ll i=2;i<=sqrt(n);i++)
+    {
+        if(n%i==0)
+        return false;
+    }
+    return true;
+}
 
 
 int main(){
@@ -13,32 +22,30 @@ int main(){
 		fast
 		ll n;
 		cin>>n;
-		int j=2;
-		bool prime[100005];
-		fill(prime,prime+100005,true);
-		for(int i=2;i*i<=100000;i++)
-		{
-			if(prime[i])
+		// ll j=2;
+		// bool prime[1000005];
+		// fill(prime,prime+1000005,true);
+		// for(ll i=2;i*i<=1000000;i++)
+		// {
+		// 	if(prime[i])
+		// 	{
+		// 		for(ll k=i*i;k<=1000000;k+=i)
+		// 		{
+		// 			prime[k]=false;
+		// 		}
+		// 	}
+		// }
+		ll k=2;
+			while(n>0)
 			{
-				for(int k=i*i;k<100000;k+=i)
+				if(isprime(k))
 				{
-					prime[k]=false;
-				}
-			}
-		}
-		while(n>0)
-		{
-			for(int i=j;i<100005;i++)
-			{
-				if(prime[i])
-				{
-					cout<<i<<"\n";
+					cout<<k<<"\n";
 					n--;
-					j=i+1;
-					break;
 				}
+				k++;
 			}			
-		}
+		
 
 
 	return 0;
